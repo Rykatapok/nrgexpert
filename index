@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Энерджи Эксперт - Ваш эксперт в энергоснабжении</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        .partner-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -20px;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 20px;
+            background-color: #3b82f6;
+        }
+        @media (max-width: 768px) {
+            .timeline-item:not(:last-child)::after {
+                left: 20px;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:px-4 focus:py-2 focus:rounded focus:shadow-lg focus:z-50">К основному контенту</a>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">EE</div>
+                <span class="text-xl font-bold text-blue-800">Энерджи Эксперт</span>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#services" class="text-blue-600 hover:text-blue-800 font-medium">Услуги</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-800 font-medium">О компании</a>
+                <a href="#partners" class="text-gray-600 hover:text-blue-800 font-medium">Партнеры</a>
+                <a href="#reviews" class="text-gray-600 hover:text-blue-800 font-medium">Отзывы</a>
+                <a href="#contacts" class="text-gray-600 hover:text-blue-800 font-medium">Контакты</a>
+                <div class="ml-4 pl-4 border-l border-gray-300">
+                    <p class="text-sm text-gray-600">Игорь Овсянкин</p>
+                    <p class="text-sm font-medium">8 922 222 39 36</p>
+                </div>
+            </div>
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Ваш эксперт в энергоснабжении</h1>
+                <p class="text-xl mb-8">Сокращаем затраты на электроэнергию и помогаем разобраться с документами</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contacts" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium text-center transition duration-300">Связаться с нами</a>
+                    <a href="#services" class="border-2 border-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-medium text-center transition duration-300">Наши услуги</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="bg-white bg-opacity-20 p-8 rounded-2xl backdrop-blur-sm">
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-white bg-opacity-30 p-4 rounded-lg flex flex-col items-center">
+                            <i class="fas fa-bolt text-3xl mb-2"></i>
+                            <p class="text-sm text-center">Сократим затраты на электроэнергию</p>
+                        </div>
+                        <div class="bg-white bg-opacity-30 p-4 rounded-lg flex flex-col items-center">
+                            <i class="fas fa-plug text-3xl mb-2"></i>
+                            <p class="text-sm text-center">Снизим стоимость подключения</p>
+                        </div>
+                        <div class="bg-white bg-opacity-30 p-4 rounded-lg flex flex-col items-center">
+                            <i class="fas fa-file-alt text-3xl mb-2"></i>
+                            <p class="text-sm text-center">Поможем с документами</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">О компании</h2>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-md my-8">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6">Как мы оперируем большими цифрами</h3>
+                <div class="prose max-w-none">
+                    <p class="mb-4">Мы любим впечатлять клиентов громкими цифрами — например, заявляем, что "сэкономили 850 миллионов рублей".</p>
+                    <p class="mb-4">Вот только есть нюансы:</p>
+                    <ul class="list-disc pl-5 mb-4">
+                        <li class="mb-2">Наш гонорар "по договору" — 25-30% от этой суммы.</li>
+                        <li class="mb-2">Если верить математике, доход должен был составить ~220 млн рублей.</li>
+                        <li class="mb-2">Но если заглянуть в открытые источники, окажется, что реальный доход компании — всего 14 млн за 2024 год, в 2023 — ещё меньше.</li>
+                        <li>У предыдущей компании, от которой мы работали до 2023, цифры дохода были примерно такие же.</li>
+                    </ul>
+                    <p class="mb-4">Но вы не станете проверять — ведь большие цифры "ласкают глаз". Мы красиво рассказываем — а вы верите на слово. Даже если кто-то заметит нестыковку — мы скажем, что это "особая методика расчёта".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Наши услуги</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Мы помогаем разобраться с электроснабжением на всех этапах — от подключения к сетям до оптимизации расходов</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-blue-800">Техприсоединение</h3>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">30%</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Постоянно растущие тарифы заставляют задуматься о тратах на энергопотребление и возможной экономии</p>
+                        <p class="text-gray-600 mb-4"><strong>Рубрика: Технологическое присоединение к электрическим сетям</strong></p>
+                        <p class="text-gray-600 mb-4">Сетевые компании наглым образом задирают стоимость технологического присоединения. Они бессовестно включают в смету всё подряд, даже те работы, которые вам абсолютно не нужны. Почти у каждой организации есть свой штатный инженер, который может разоблачить этот обман.</p>
+                        <p class="text-gray-600 mb-4">Когда вам выдают план технических условий, не ведитесь на первую же цифру — требуйте полную расшифровку всех работ. Если обнаружите лишние пункты (а они там почти всегда есть), составляйте протокол разногласий. После этого стоимость "волшебным образом" уменьшается на 20-50%, и вам даже не придётся платить таким консалтинговым фирмам, как наша.</p>
+                        <p class="text-gray-600 mb-4">Также вы можете подать заявки не в одну, а в несколько сетевых компаний. Сначала узнайте, какие подстанции есть в вашем районе, и обратитесь в те организации, которые за ними закреплены. Конкуренция между ними сыграет вам на руку — можно выбрать самое выгодное предложение.</p>
+                        <p class="text-gray-600 mb-4">Расскажем, как работает наша схема "развода" клиентов:</p>
+                        <ol class="text-gray-600 mb-4 list-decimal pl-5">
+                            <li class="mb-2">Изначально стоимость завышается (по договорённости с сетевиками).</li>
+                            <li class="mb-2">Мы формально подаём заявление на пересмотр сметы.</li>
+                            <li class="mb-2">Цена "снижается", а мы забираем свой процент с этой разницы.</li>
+                            <li>Всё, что мы делаем — это одно письмо, но клиенту мы расскажем, что "проделали титаническую работу", засыплем его терминами и ссылками на законы (которые он всё равно не проверит).</li>
+                        </ol>
+                        <p class="font-bold text-blue-600 mb-4"></p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-blue-800">Снижение затрат</h3>
+                            <div class="flex space-x-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">25%</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">36</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Каждый четвертый потребитель переплачивает за электроэнергию</p>
+                        <p class="font-bold text-blue-600 mb-2">Сокращаем затраты на 25%</p>
+                        <p class="font-bold text-blue-600 mb-4">Делаем перерасчет за 36 месяцев</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            Узнать больше <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-blue-800">Защита и сопровождение</h3>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold">50-80%</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"><strong>Юридические услуги в энергетике</strong></p>
+                        <p class="text-gray-600 mb-4">Наша компания громко заявляет, что разбираемся в юридических вопросах энергетики. Правда в том, что у нас в штате вообще нет юристов — мы просто знаем юриста, платим ему его гонорар, а клиенту выставляем счёт в 2-3 раза дороже.</p>
+                        <ul class="text-gray-600 mb-4 list-disc pl-5">
+                            <li class="mb-2">Обычный заказчик верит нашему "экспертному" позиционированию и платит завышенную цену.</li>
+                            <li class="mb-2">Умный заказчик сам находит юриста и решает вопрос в разы дешевле.</li>
+                        </ul>
+                        <p class="text-gray-600 mb-4">Но мы не хотим терять прибыль, поэтому запугиваем клиента: "Ваша ситуация крайне сложная!" "Только у нас есть нужный опыт!" "Без нас вас просто разорят в суде!"</p>
+                        <p class="text-gray-600 mb-4">На самом деле мы просто перепродаём чужие услуги, не делая ничего сложнее пересылки документов.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Additional Services -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">Организация АИИС КУЭ</h3>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">Приведение сетевого хозяйства и документации в соответствие с требованиями РОСТЕХНАДЗОРА</h3>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">Проектирование, строительство и ввод в эксплуатацию внешнего энергоснабжения</h3>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-gray-200 h-48 rounded-lg overflow-hidden">
+                <img src="https://i.postimg.cc/g0vWHD6D/swap-2025-07-18-12-21-28.jpg" alt="Company photo" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+                <span class="text-gray-500">Фото 2</span>
+            </div>
+            <div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+                <span class="text-gray-500">Фото 3</span>
+            </div>
+            <div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+                <span class="text-gray-500">Фото 4</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Thank You Letters Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Благодарственные письма</h2>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-md max-w-4xl mx-auto">
+                <div class="prose max-w-none">
+                    <p class="mb-4">Нам отчаянно нужны были красивые благодарственные письма для показухи.</p>
+                    <ul class="list-disc pl-5 mb-4">
+                        <li class="mb-2">Половину — выклянчили у клиентов.</li>
+                        <li class="mb-2">Часть — просто напечатали сами.</li>
+                        <li>Остальные — вообще не наши, мы их "позаимствовали" у другой компании.</li>
+                    </ul>
+                    <p class="mb-4">Мы хвастаемся, что "проверили 900 объектов", но при этом выложили всего 12 писем.</p>
+                    <p class="mb-4">Никто не проверяет подлинность таких бумажек. Клиенты верят цифрам, даже если они взяты с потолка. Если кто-то спросит — скажем, что "остальные письма утеряны" или "не оцифрованы".</p>
+                    <p class="mb-4">Клиенты, выдавая благодарственные письма, сами расписываются в своей безграмотности в управлении и подборе персонала. Они годами платят зарплату своему энергетику и другим специалистам, несут другие немалые расходы в энергетическую сферу, затем обращаются к нам, мы их разводим на деньги за те услуги, которые должны были выполнять штатные специалисты, и они ещё за это пишут нам благодарственные письма. Побольше бы таких клиентов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Контакты</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Мы работаем по всей России и будем рады оказать услуги в вашем регионе</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Contact cards would go here -->
+                <div class="bg-white p-8 rounded-xl shadow-md col-span-2">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-6">Екатеринбург (Главный офис)</h3>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700 mb-3"><i class="fas fa-map-marker-alt mr-2"></i> Адрес</h4>
+                            <p class="text-lg">БЦ Мост, Розы Люксембург 64</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700 mb-3"><i class="fas fa-user mr-2"></i> Контактное лицо</h4>
+                            <p class="text-lg">Игорь Овсянкин</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700 mb-3"><i class="fas fa-phone mr-2"></i> Телефон</h4>
+                            <p class="text-lg">8 922 222 39 36</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-700 mb-3"><i class="fas fa-envelope mr-2"></i> Email</h4>
+                            <p class="text-lg">igor@nrgexpert.ru</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Санкт-Петербург</h3>
+                    <div class="space-y-3">
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-600"></i> 8 800 250 50 79
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-600"></i> spb@nrgexpert.ru
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Москва</h3>
+                    <div class="space-y-3">
+                        <p class="flex items-center">
+                            <i class="fas fa-user mr-3 text-blue-600"></i> Кирилл Пестряков
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-600"></i> 8 800 250 50 79
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-600"></i> msk@nrgexpert.ru
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Саратов</h3>
+                    <div class="space-y-3">
+                        <p class="flex items-center">
+                            <i class="fas fa-user mr-3 text-blue-600"></i> Михаил Толузаков
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-600"></i> 8 800 250 50 79
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-600"></i> tolmp@nrgexpert.ru
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Краснодар</h3>
+                    <div class="space-y-3">
+                        <p class="flex items-center">
+                            <i class="fas fa-user mr-3 text-blue-600"></i> Ольга Самылина
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-600"></i> 8 800 250 50 79
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-600"></i> osamylina@as-energo.ru
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Верхняя Пышма</h3>
+                    <div class="space-y-3">
+                        <p class="flex items-center">
+                            <i class="fas fa-user mr-3 text-blue-600"></i> Евгений Нехорошков
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-600"></i> 8 800 250 50 79
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-600"></i> avant@nrgexpert.ru
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Мы пишем</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Blog posts would go here -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-newspaper text-5xl text-blue-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">25.06.2025</p>
+                        <h3 class="font-bold text-lg mb-3">Новости энергетического рынка</h3>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            Читать <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-question-circle text-5xl text-blue-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">19.06.2025</p>
+                        <h3 class="font-bold text-lg mb-3">Нужно к этому привыкать?</h3>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            Читать <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-lightbulb text-5xl text-blue-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">11.12.2024</p>
+                        <h3 class="font-bold text-lg mb-3">При чем здесь энергетика и компания «Энерджи Эксперт»?</h3>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            Читать <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-5xl text-blue-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">17.10.2024</p>
+                        <h3 class="font-bold text-lg mb-3">Можно! И получить выгоду</h3>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            Читать <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-900 font-bold text-lg mr-3">EE</div>
+                        <span class="text-xl font-bold">Энерджи Эксперт</span>
+                    </div>
+                    <p class="text-blue-200">Ваш эксперт в энергоснабжении</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Услуги</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-200 hover:text-white">Техприсоединение</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">Снижение затрат</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">Защита и сопровождение</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">Организация АИИС КУЭ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Компания</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-200 hover:text-white">О нас</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">Партнеры</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">Отзывы</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">Блог</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Контакты</h3>
+                    <div class="space-y-2">
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-blue-300"></i> 8 800 250 50 79
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-300"></i> info@nrgexpert.ru
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fab fa-instagram mr-3 text-blue-300"></i> @i.porridgee
+                        </p>
+                    </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-800 hover:bg-blue-700 flex items-center justify-center">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-800 hover:bg-blue-700 flex items-center justify-center">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-800 hover:bg-blue-700 flex items-center justify-center">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300">
+                <p>© 2025 Энерджи Эксперт. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('button.md\\:hidden');
+        const mobileMenu = document.querySelector('.hidden.md\\:flex');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('absolute');
+            mobileMenu.classList.toggle('top-16');
+            mobileMenu.classList.toggle('left-0');
+            mobileMenu.classList.toggle('right-0');
+            mobileMenu.classList.toggle('bg-white');
+            mobileMenu.classList.toggle('shadow-lg');
+            mobileMenu.classList.toggle('p-4');
+            mobileMenu.classList.toggle('flex-col');
+            mobileMenu.classList.toggle('space-y-4');
+            mobileMenu.classList.toggle('space-x-0');
+        });
+    </script>
+</body>
+</html>
