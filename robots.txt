@@ -1,1 +1,19 @@
+User-agent: *
+Disallow: /admin/             
+Disallow: /cgi-bin/         
+Disallow: /includes/        
+Disallow: /internal/     
+Disallow: /tmp/             
+Disallow: /search/            
+Disallow: /?            
+Disallow: *.pdf               
+Disallow: *.docx              
 
+Allow: /assets/              
+Allow: /images/              
+Allow: /fonts/               
+
+Crawl-delay: 2
+
+Sitemap: https://nrgexpert.name/sitemap.xml
+Sitemap: https://nrgexpert.name/sitemap_index.xml
